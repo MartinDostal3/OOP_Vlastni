@@ -48,15 +48,14 @@ namespace OOP_Vlastni
             if (pocetDrinku + kusy <= 120 ) pocetDrinku += kusy;
             else
             {
+                pocetDrinku = kusy;
                 System.Windows.Forms.MessageBox.Show("Pro dnešek máš splněnu, běž domů!");
             }
         }
 
         public void OdpracujHodiny(int hodiny)
         {
-            if (odpracHodiny + hodiny <= 12) odpracHodiny += hodiny;
-            else System.Windows.Forms.MessageBox.Show("Barman může pracovat jen dvanaáct hodin denně");
-
+            odpracHodiny += hodiny;
         }
         public double VypoctiMzdu()
         {
@@ -69,19 +68,23 @@ namespace OOP_Vlastni
         
 
 
+       
+
         public override string ToString()
         {
+            string s = string.Empty;
             string maBonus = "NE, nemá nárok na dovolenou";
             if (Dovolena()) maBonus = "ANO, má nárok na dovolenou";
-            string s = "Jméno: " + Jmeno
+             s = "\nJméno: " + Jmeno
                      + "\nPříjmení: " + Prijmeni
-                     + "\nOdpracované hodiny za den: " + odpracHodiny
+                     + "\nOdpracované hodiny: " + odpracHodiny
                      + "\nHodinová mzda: " + HodinovaMzda
-                     + "\nVypočtená mzda za den: " + VypoctiMzdu()
-                     +"\nDnes nalito drinků: " + pocetDrinku
+                     + "\nVypočtená mzda : " + VypoctiMzdu()
+                     + "\nDnes nalito drinků: " + pocetDrinku
                      + "\nDovolená: " + maBonus;
-            return s;
+            return base.ToString() + s;
         }
+
 
 
     }

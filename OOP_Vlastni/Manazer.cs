@@ -9,16 +9,18 @@ namespace OOP_Vlastni
     internal class Manazer : Barman
     {
         private double priplatekZaVedeni = 0;
-        
-        public Manazer(string jmeno, string prijmeni, double hodinovaMzda, double priplatekZaVedeni) : base(jmeno, prijmeni, hodinovaMzda)
+        private int papiry = 0;
+
+        public Manazer(string jmeno, string prijmeni, double hodinovaMzda, double priplatekZaVedeni, int papiry) : base(jmeno, prijmeni, hodinovaMzda)
         {
             this.priplatekZaVedeni = priplatekZaVedeni;
-
+            this.papiry = papiry;
+            
         }
 
         public double PriplatekZaVedeni
         {
-            get 
+            get
             {
                 return priplatekZaVedeni;
             }
@@ -27,5 +29,35 @@ namespace OOP_Vlastni
                 priplatekZaVedeni = value;
             }
         }
+
+        public int Papiry { get; private set; }
+
+        public void pracuj(int hotovo)
+        {
+            
+         
+            hotovo = 0;
+
+
+            
+               
+                while(hotovo < papiry)
+                {
+                    hotovo++;
+                }
+
+            int zbyva = 20 - papiry;
+          if(hotovo == papiry)
+                System.Windows.Forms.MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry! a dneska mu ještě zbývá: " + zbyva);
+            
+
+            /*int neudelano = 20 - hotovo;
+            System.Windows.Forms.MessageBox.Show("Manažerovi zbývá vyřídit: " + neudelano + " papírů.");*/
+
+
+
+        }
+       
+
     }
 }
