@@ -32,7 +32,7 @@ namespace OOP_Vlastni
 
         public int Papiry { get; private set; }
 
-        public void pracuj(int hotovo)
+        public void Pracuj(int hotovo)
         {
             
          

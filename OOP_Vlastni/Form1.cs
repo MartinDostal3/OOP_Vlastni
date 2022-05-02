@@ -29,7 +29,7 @@ namespace OOP_Vlastni
 
             Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 12);
             mngr.OdpracujHodiny(2);
-            mngr.pracuj(21);
+            mngr.Pracuj(21);
             MessageBox.Show(mngr.ToString() + "\nPříplatek za vedení: " + mngr.PriplatekZaVedeni);
 
 
