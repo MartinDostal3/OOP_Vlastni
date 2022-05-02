@@ -46,9 +46,14 @@ namespace OOP_Vlastni
                     hotovo++;
                 }
 
-            int zbyva = 20 - papiry;
-          if(hotovo == papiry)
+          
+                int zbyva = 20 - papiry;
+       
+           if(papiry < 20)
                 System.Windows.Forms.MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry! a dneska mu ještě zbývá: " + zbyva);
+
+            else if (hotovo == papiry)
+                System.Windows.Forms.MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry!");
             
 
             /*int neudelano = 20 - hotovo;
