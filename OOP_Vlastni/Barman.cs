@@ -57,7 +57,7 @@ namespace OOP_Vlastni
         {
             odpracHodiny += hodiny;
         }
-        public double VypoctiMzdu()
+        public virtual double VypoctiMzdu()
         {
             return odpracHodiny * HodinovaMzda;
         }
@@ -65,6 +65,8 @@ namespace OOP_Vlastni
         {
             return odpracHodiny >= 320;
         }
+
+        
         
 
 

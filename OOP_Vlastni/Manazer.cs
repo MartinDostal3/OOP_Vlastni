@@ -30,6 +30,18 @@ namespace OOP_Vlastni
             }
         }
 
+        public override double VypoctiMzdu()
+        {
+            if(odpracHodiny > 200)
+            {
+                return base.VypoctiMzdu() + 3000;
+            }
+            else
+            {
+                return base.VypoctiMzdu();
+            }
+            
+        }
         public int Papiry { get; private set; }
 
         public void Pracuj(int hotovo)
@@ -62,7 +74,12 @@ namespace OOP_Vlastni
 
 
         }
-       
+        public override string ToString()
+        {
+
+            return base.ToString() + "\nPříplatek za vedení: " + PriplatekZaVedeni;
+        }
+
 
     }
 }

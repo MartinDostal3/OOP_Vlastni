@@ -27,10 +27,12 @@ namespace OOP_Vlastni
             brmn.Nalej(130);
             MessageBox.Show(brmn.ToString());
 
-            Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 12);
-            mngr.OdpracujHodiny(2);
-            mngr.Pracuj(21);
-            MessageBox.Show(mngr.ToString() + "\nPříplatek za vedení: " + mngr.PriplatekZaVedeni);
+            Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 21);
+            
+            mngr.OdpracujHodiny(520);
+            mngr.Pracuj(2);
+            
+            MessageBox.Show(mngr.ToString());
 
 
         }
