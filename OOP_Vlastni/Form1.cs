@@ -19,18 +19,20 @@ namespace OOP_Vlastni
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Barman brmn = new Barman("Honza", "Marek", 125);
-            MessageBox.Show(brmn.ToString());
-            brmn.OdpracujHodiny(11);
+            Barman brmn = new Barman("Honza", "Marek", 119);
           
-            
-            brmn.Nalej(130);
+            brmn.OdpracujHodiny(48);
+            brmn.Nalej(110);
             MessageBox.Show(brmn.ToString());
 
-            Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 21);
+
+            
+           
+
+            Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 19);
             
             mngr.OdpracujHodiny(520);
-            mngr.Pracuj(2);
+            mngr.Pracuj();
             
             MessageBox.Show(mngr.ToString());
 

@@ -44,11 +44,11 @@ namespace OOP_Vlastni
         }
         public int Papiry { get; private set; }
 
-        public void Pracuj(int hotovo)
+        public void Pracuj()
         {
-            
-         
-            hotovo = 0;
+
+
+            int hotovo = 0;
 
 
             
@@ -68,16 +68,17 @@ namespace OOP_Vlastni
                 System.Windows.Forms.MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry!");
             
 
-            /*int neudelano = 20 - hotovo;
-            System.Windows.Forms.MessageBox.Show("Manažerovi zbývá vyřídit: " + neudelano + " papírů.");*/
+      
 
 
 
         }
         public override string ToString()
         {
+            string s = string.Empty;
+            s = "\nPříplatek za vedení: " + PriplatekZaVedeni;
 
-            return base.ToString() + "\nPříplatek za vedení: " + PriplatekZaVedeni;
+            return base.ToString() + s;
         }
 
 
