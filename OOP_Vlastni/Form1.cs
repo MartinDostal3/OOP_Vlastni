@@ -29,7 +29,7 @@ namespace OOP_Vlastni
             
            
 
-            Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 19);
+            Manazer mngr = new Manazer("Martin", "novák", 200, 2000, 21);
             
             mngr.OdpracujHodiny(520);
             mngr.Pracuj();

@@ -64,13 +64,8 @@ namespace OOP_Vlastni
         public bool Dovolena()
         {
             return odpracHodiny >= 320;
-        }
-
-        
-        
-
-
-       
+        }      
+              
 
         public override string ToString()
         {

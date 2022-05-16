@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OOP_Vlastni
 {
@@ -32,7 +33,7 @@ namespace OOP_Vlastni
 
         public override double VypoctiMzdu()
         {
-            if(odpracHodiny > 200)
+            if(odpracHodiny > 200) //pokud odpracuje vice nez 200 hodin, dostane příplatek 3000Kč ke mzdě 
             {
                 return base.VypoctiMzdu() + 3000;
             }
@@ -46,27 +47,19 @@ namespace OOP_Vlastni
 
         public void Pracuj()
         {
-
-
-            int hotovo = 0;
-
-
-            
+            int hotovo = 0;        
                
                 while(hotovo < papiry)
                 {
                     hotovo++;
-                }
-
-          
+                }          
                 int zbyva = 20 - papiry;
        
            if(papiry < 20)
-                System.Windows.Forms.MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry! a dneska mu ještě zbývá: " + zbyva);
+                MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry! a dneska mu ještě zbývá: " + zbyva);
 
             else if (hotovo == papiry)
-                System.Windows.Forms.MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry!");
-            
+                MessageBox.Show("Manažer, vyřídil všechny teď zadané papíry!");          
 
       
 
@@ -77,7 +70,6 @@ namespace OOP_Vlastni
         {
             string s = string.Empty;
             s = "\nPříplatek za vedení: " + PriplatekZaVedeni;
-
             return base.ToString() + s;
         }
 
